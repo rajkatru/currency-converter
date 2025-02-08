@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;700&display=swap');
+
+/* Global Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Raleway', sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4, #ffdde1, #fbc2eb);
+    background-size: 400% 400%;
+    animation: gradientBG 8s ease infinite;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Background animation */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Main Container */
+.my-container {
+    background: rgba(255, 255, 255, 0.2); /* Glass effect */
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+/* Heading Style */
+.head {
+    font-size: 24px;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    margin-bottom: 15px;
+}
+
+/* Labels */
+label {
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Input Fields & Dropdowns */
+input, select {
+    width: 90%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    border-radius: 8px;
+    font-size: 16px;
+    text-align: center;
+    color: #333;
+    background: rgba(255, 255, 255, 0.9);
+    outline: none;
+    transition: 0.3s ease-in-out;
+}
+
+input:focus, select:focus {
+    border-color: #ff6b6b;
+    box-shadow: 0px 0px 8px rgba(255, 107, 107, 0.8);
+}
+
+/* Colorful Button */
+#btn {
+    background: linear-gradient(135deg, #ff6b6b, #ffcc5c);
+    color: white;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    text-transform: uppercase;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#btn:hover {
+    background: linear-gradient(135deg, #ffcc5c, #ff6b6b);
+    transform: scale(1.05);
+    box-shadow: 0px 4px 12px rgba(255, 107, 107, 0.7);
+}
+
+/* Result Display */
+#result {
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 8px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 480px) {
+    .my-container {
+        max-width: 90%;
+        padding: 20px;
+    }
+    .head {
+        font-size: 22px;
+    }
+    input, select {
+        font-size: 14px;
+        padding: 10px;
+    }
+    #btn {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
